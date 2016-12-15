@@ -5,13 +5,13 @@ def gold_room():
 
 	next = raw_input("> ")
 
-	if "0" in next or "1" in next:
+	if int(next):
 		how_much = int(next)
 	else:
 		dead("Man, learn to type a number.")
 
 	if how_much < 50:
-		print("Nice, you're not greedy, you win!")
+		print("Nice, you're not greedy.")
 		exit(0)
 	else:
 		dead("You greedy Bastard!")
@@ -53,7 +53,7 @@ def cthulhu_room():
 		cthulhu_room()
 
 def dead(why):
-	print (why, "Good job!")
+	print (why)
 	exit(0)
 
 def start():
@@ -69,5 +69,6 @@ def start():
 		cthulhu_room()
 	else:
 		dead("You stumble around the room until you starve.")
+		
 
 start()

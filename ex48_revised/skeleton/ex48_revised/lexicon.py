@@ -14,16 +14,18 @@ def scan(word):
 			'in': 'stop',
 			'of':'stop',
 			'bear': 'noun',
-			'princess': 'noun',
-			'ASDFADFASDF': 'error',
-			'IAS': 'error'
+			'princess': 'noun'
 	}
 	a = word.split()
 	key = []
 
 	for i in a:
-		if type(i) is str and i in dict1:
-			key.append((dict1[i], i))
-		elif type(int(i)) is int:
-			key.append(('number' , int(i)))
+		try:
+			if type(int(i)) is int:
+				key.append(('number' , int(i)))
+		except:
+			if type(i) is str and i in dict1:
+				key.append((dict1[i], i))
+			if type(i) is str and i not in dict1:
+				key.append(("error", i))
 	return key

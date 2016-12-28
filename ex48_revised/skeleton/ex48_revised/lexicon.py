@@ -27,6 +27,6 @@ def scan(word):
 	for i in a:
 		if type(i) is str and i in dict1:
 			key.append((dict1[i], i))
-		elif type(int(i)) is int and int(i) in dict1:
-			key.append((dict1[int(i)], int(i)))
+		elif type(int(i)) is int:
+			key.append(('number' , int(i)))
 	return key

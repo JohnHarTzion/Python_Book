@@ -15,9 +15,6 @@ def scan(word):
 			'of':'stop',
 			'bear': 'noun',
 			'princess': 'noun',
-			1234: 'number',
-			3: 'number',
-			91234: 'number',
 			'ASDFADFASDF': 'error',
 			'IAS': 'error'
 	}
